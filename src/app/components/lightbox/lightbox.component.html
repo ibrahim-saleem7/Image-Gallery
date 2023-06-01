@@ -1,0 +1,17 @@
+<div  class="lightbox" [ngClass]="{'show': show}">
+  <div class="wrapper">
+    <header >
+      <div class="photographer" >
+        <fa-icon [icon]="faCamera" ></fa-icon>
+        <span>{{photographer}}</span>
+      </div>
+      <div class="buttons">
+        <a [href]= href [download]="downloadTime"><fa-icon [icon]="faDownload" ></fa-icon></a>
+        <fa-icon [icon]="faXmark" (click)="close()"></fa-icon>
+      </div>
+    </header>
+    <div class="preview-img">
+      <div class="img"><img [src]="imgUrl" alt="preview-img"></div>
+    </div>
+  </div>
+</div>

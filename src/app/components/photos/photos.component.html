@@ -1,0 +1,22 @@
+<section class="gallery">
+
+  <ul class="images">
+
+    <li class="card" *ngFor="let item of photos">
+      <img [src]=item.src.large2x alt="" (click)="open(item.photographer , item.src.large2x )"  >
+      <div class="details">
+        <div class="photographer">
+          <fa-icon [icon]="faCamera" ></fa-icon>
+          <span>{{item.photographer}}</span>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <div class="btns">
+    <button class="load-more" [ngClass]="{'disabled' : page == 1 }" (click)="previous('top')" >Previous</button>
+    <button class="load-more" (click)="next('top')">Next</button>
+  </div>
+
+</section>
